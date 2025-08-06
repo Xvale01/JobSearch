@@ -1,0 +1,37 @@
+﻿@model List<Web_MySearchJob_Core.Entities.JobApplication>
+
+@{
+    ViewData["Title"] = "GetJobApplications";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Date Publication</th>
+            <th scope="col">Application Date</th>
+            <th scope="col">Job Name</th>
+            <th scope="col">Company</th>
+            <th scope="col">Application Page</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.DatePublication</td>
+                <td>@item.ApplicationDate</td>
+                <td>@item.JobName</td>
+                <td>@item.Company</td>
+                <td>@item.ApplicationPage</td>
+                <td>@item.Salary</td>
+                <td>
+                    <a type="button" class="btn btn-primary">Detail</a>
+                    <a href="@Url.Action("DeleteJobApplication", "JobApplication", new { id = item.Id })" type="button" class="btn btn-primary">Delete</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

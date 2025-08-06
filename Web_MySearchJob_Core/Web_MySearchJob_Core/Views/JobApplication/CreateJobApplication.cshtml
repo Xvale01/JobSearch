@@ -1,0 +1,76 @@
+﻿@model Web_MySearchJob_Core.Entities.JobApplication
+@{
+    ViewData["Title"] = "Crear Job Application";
+}
+
+<h2>Crear Job Application</h2>
+
+<form asp-action="CreateJobApplication" method="post">
+    <div>
+        <label asp-for="JobName">Job Name</label>
+        <input asp-for="JobName" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Company">Company</label>
+        <input asp-for="Company" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="ApplicationPage">Application Page</label>
+        <input asp-for="ApplicationPage" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Salary">Salary</label>
+        <input asp-for="Salary" class="form-control" type="number" step="any" />
+    </div>
+    <div>
+        <label asp-for="Benefits">Benefits</label>
+        <input asp-for="Benefits" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Requirements">Requirements</label>
+        <input asp-for="Requirements" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Functions">Functions</label>
+        <input asp-for="Functions" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Softskills">Softskills</label>
+        <input asp-for="Softskills" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Experience">Experience</label>
+        <input asp-for="Experience" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="JobModalityId">Modality</label>
+        <select asp-for="JobModalityId" asp-items="ViewBag.ModalityList" class="form-control">
+            <option value="">-- Select Modality --</option>
+        </select>
+    </div>
+    <div>
+        <label asp-for="Country">Country</label>
+        <input asp-for="Country" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Province">Province</label>
+        <input asp-for="Province" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="City">City</label>
+        <input asp-for="City" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Address">Address</label>
+        <input asp-for="Address" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="DatePublication">Date Publication</label>
+        <input asp-for="DatePublication" class="form-control" type="date" />
+    </div>
+    <div>
+        <label asp-for="ApplicationDate">Application Date</label>
+        <input asp-for="ApplicationDate" class="form-control" type="date" />
+    </div>
+    <button type="submit" class="btn btn-primary">Crear</button>
+</form>
